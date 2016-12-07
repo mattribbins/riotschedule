@@ -3,7 +3,7 @@
  * Plugin Name: RiotSchedule
  * Plugin URI: http://www.mattyribbo.co.uk/riotschedule
  * Description: Plugin to display weekly schedule for TV/Radio
- * Version: 1.1.9-a1
+ * Version: 1.1.2
  * Author: Matt Ribbins
  * Author URI: http://www.mattyribbo.co.uk
  * Copyright 2013 Matt Ribbins (matt@mattyribbo.co.uk)
@@ -27,7 +27,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-$version = "1.1.9-a1";
+$version = "1.1.2";
 
 
 if (is_file(trailingslashit(ABSPATH.PLUGINDIR).'riotschedule.php')) {
