@@ -3,7 +3,7 @@
  * Plugin Name: RiotSchedule
  * Plugin URI: http://www.mattyribbo.co.uk/riotschedule
  * Description: Plugin to display weekly schedule for TV/Radio
- * Version: 1.1b2
+ * Version: 1.1.9-a1
  * Author: Matt Ribbins
  * Author URI: http://www.mattyribbo.co.uk
  * Copyright 2013 Matt Ribbins (matt@mattyribbo.co.uk)
@@ -27,7 +27,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
  
-$version = "1.1b2";
+$version = "1.1.9-a1";
 
 
 if (is_file(trailingslashit(ABSPATH.PLUGINDIR).'riotschedule.php')) {
@@ -760,7 +760,7 @@ function rs_now_next_func( $atts ) {
 	// Next show mode
 	if($mode == 'next') {
 		// Find the next item after the current hour
-		$sqlitems = "SELECT * FROM ".$wpdb->prefix."rs_items WHERE day = '".$wsc_day."' AND starttime > '".$wsc_hour."' AND enabled = 1 AND AND scheduleid = " . $schedule . " ORDER BY starttime ASC, type DESC LIMIT 0,1";
+		$sqlitems = "SELECT * FROM ".$wpdb->prefix."rs_items WHERE day = '".$wsc_day."' AND starttime > '".$wsc_hour."' AND enabled = 1 AND scheduleid = " . $schedule . " ORDER BY starttime ASC, type DESC LIMIT 0,1";
 		$items = $wpdb->get_row($sqlitems,ARRAY_A);
 		// If items found, that is the next show. If no items found, check next day up until 1pm!
 		if(!$items) {
